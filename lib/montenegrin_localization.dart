@@ -2,3 +2,4 @@
 library;
 
 export 'src/montenegrin_material_localizations.dart';
+export 'src/montenegrin_widgets_localizations.dart';
