@@ -1,6 +1,6 @@
 name: montenegrin_localization
 description: A Flutter localization package specifically designed for Montenegrin script (crnogorski/латиница) that provides comprehensive text translations and region-specific formatting.
-version: 1.0.0
+version: 0.1.0+1
 homepage: https://github.com/YassinNouh21/montenegrin_localization
 repository: https://github.com/YassinNouh21/montenegrin_localization
 
