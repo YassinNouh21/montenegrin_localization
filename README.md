@@ -6,62 +6,78 @@
 
 A Flutter localization package specifically designed for Montenegrin script (crnogorski/латиница) that provides comprehensive text translations and region-specific formatting.
 
+## Features 🎯
+
+- Complete Montenegrin translations for Material Design
+- Cupertino (iOS-style) widget translations
+- Base widget localizations
+- Date and number formatting specific to Montenegrin standards
+- Support for both Latin script
+- Custom date patterns and symbols
+
 ## Installation 💻
 
 **❗ In order to start using Montenegrin Localization you must have the [Flutter SDK][flutter_install_link] installed on your machine.**
 
-Install via `flutter pub add`:
+Add `montenegrin_localization` to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  montenegrin_localization: ^latest_version
+```
+
+Or install via command line:
 
 ```sh
 dart pub add montenegrin_localization
 ```
 
----
+## Usage 📖
 
-## Continuous Integration 🤖
+1. Import the package:
 
-Montenegrin Localization comes with a built-in [GitHub Actions workflow][github_actions_link] powered by [Very Good Workflows][very_good_workflows_link] but you can also add your preferred CI/CD solution.
-
-Out of the box, on each pull request and push, the CI `formats`, `lints`, and `tests` the code. This ensures the code remains consistent and behaves correctly as you add functionality or make changes. The project uses [Very Good Analysis][very_good_analysis_link] for a strict set of analysis options used by our team. Code coverage is enforced using the [Very Good Workflows][very_good_coverage_link].
-
----
-
-## Running Tests 🧪
-
-For first time users, install the [very_good_cli][very_good_cli_link]:
-
-```sh
-dart pub global activate very_good_cli
+```dart
+import 'package:montenegrin_localization/montenegrin_localization.dart';
 ```
 
-To run all unit tests:
+2. Add the Montenegrin localization delegates to your `MaterialApp`:
 
-```sh
-very_good test --coverage
+```dart
+MaterialApp(
+  localizationsDelegates: const [
+    // Add these delegates
+    MontenegrinMaterialLocalizations.delegate,
+    MontenegrinCupertinoLocalizations.delegate,
+    MontenegrinWidgetsLocalizations.delegate,
+    
+    // Default delegates
+    GlobalMaterialLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ],
+  supportedLocales: const [
+    Locale('cnr'), // Montenegrin
+  ],
+  // ... other settings
+);
 ```
 
-To view the generated coverage report you can use [lcov](https://github.com/linux-test-project/lcov).
+## Available Localizations 🌍
 
-```sh
-# Generate Coverage Report
-genhtml coverage/lcov.info -o coverage/
+The package includes three main types of localizations:
 
-# Open Coverage Report
-open coverage/index.html
+- **Material Localizations**: Translations for Material Design widgets
+- **Cupertino Localizations**: Translations for iOS-style widgets
+- **Widget Localizations**: Base widget translations
+
+### Example Usage
+
+```dart
+// Get localized strings
+final localizedText = MaterialLocalizations.of(context).copyButtonLabel;
+// Returns "Kopiraj" for Montenegrin
+
+// Format dates
+final formattedDate = MaterialLocalizations.of(context).formatFullDate(DateTime.now());
+// Returns date in Montenegrin format
 ```
-
-[flutter_install_link]: https://docs.flutter.dev/get-started/install
-[github_actions_link]: https://docs.github.com/en/actions/learn-github-actions
-[license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[license_link]: https://opensource.org/licenses/MIT
-[logo_black]: https://raw.githubusercontent.com/VGVentures/very_good_brand/main/styles/README/vgv_logo_black.png#gh-light-mode-only
-[logo_white]: https://raw.githubusercontent.com/VGVentures/very_good_brand/main/styles/README/vgv_logo_white.png#gh-dark-mode-only
-[mason_link]: https://github.com/felangel/mason
-[very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
-[very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
-[very_good_cli_link]: https://pub.dev/packages/very_good_cli
-[very_good_coverage_link]: https://github.com/marketplace/actions/very-good-coverage
-[very_good_ventures_link]: https://verygood.ventures
-[very_good_ventures_link_light]: https://verygood.ventures#gh-light-mode-only
-[very_good_ventures_link_dark]: https://verygood.ventures#gh-dark-mode-only
-[very_good_workflows_link]: https://github.com/VeryGoodOpenSource/very_good_workflows
