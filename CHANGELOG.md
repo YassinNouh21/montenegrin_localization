@@ -1,4 +1,4 @@
-# [1.0.0] - 2024-11-27
+# 0.1.0+1
 
 ### Added
 - Initial release of Montenegrin Localization package
