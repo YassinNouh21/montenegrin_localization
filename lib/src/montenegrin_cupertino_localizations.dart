@@ -37,11 +37,10 @@ class _MontenegrinCupertinoLocalizationsDelegate
         dayFormat: intl.DateFormat('yMd', localeName),
         doubleDigitMinuteFormat: intl.DateFormat('yMMMd', localeName),
         mediumDateFormat: intl.DateFormat('EEE, MMM d', localeName),
-        singleDigitHourFormat:
-        intl.DateFormat('EEEE, MMMM d, y', localeName),
-        singleDigitMinuteFormat:
-        intl.DateFormat('MMMM y', localeName),
+        singleDigitHourFormat: intl.DateFormat('EEEE, MMMM d, y', localeName),
+        singleDigitMinuteFormat: intl.DateFormat('MMMM y', localeName),
         singleDigitSecondFormat: intl.DateFormat('MMM d', localeName),
+        weekdayFormat: intl.DateFormat('EEEE', localeName),
       ),
     );
   }
@@ -65,6 +64,7 @@ class MontenegrinCupertinoLocalizations
     required intl.DateFormat doubleDigitMinuteFormat,
     required intl.DateFormat singleDigitSecondFormat,
     required intl.NumberFormat decimalFormat,
+    required intl.DateFormat weekdayFormat,
   }) : super(
           localeName: localeName,
           fullYearFormat: fullYearFormat,
@@ -75,6 +75,7 @@ class MontenegrinCupertinoLocalizations
           doubleDigitMinuteFormat: doubleDigitMinuteFormat,
           singleDigitSecondFormat: singleDigitSecondFormat,
           decimalFormat: decimalFormat,
+          weekdayFormat: weekdayFormat,
         );
 
   // #docregion Getters
