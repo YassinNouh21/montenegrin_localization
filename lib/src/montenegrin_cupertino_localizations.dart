@@ -56,16 +56,26 @@ class _MontenegrinCupertinoLocalizationsDelegate
 class MontenegrinCupertinoLocalizations
     extends GlobalCupertinoLocalizations {
   const MontenegrinCupertinoLocalizations({
-    super.localeName = 'cnr',
-    required super.fullYearFormat,
-    required super.dayFormat,
-    required super.doubleDigitMinuteFormat,
-    required super.singleDigitHourFormat,
-    required super.singleDigitMinuteFormat,
-    required super.singleDigitSecondFormat,
-    required super.decimalFormat,
-    required super.mediumDateFormat,
-  });
+    String localeName = 'cnr',
+    required intl.DateFormat fullYearFormat,
+    required intl.DateFormat dayFormat,
+    required intl.DateFormat mediumDateFormat,
+    required intl.DateFormat singleDigitHourFormat,
+    required intl.DateFormat singleDigitMinuteFormat,
+    required intl.DateFormat doubleDigitMinuteFormat,
+    required intl.DateFormat singleDigitSecondFormat,
+    required intl.NumberFormat decimalFormat,
+  }) : super(
+          localeName: localeName,
+          fullYearFormat: fullYearFormat,
+          dayFormat: dayFormat,
+          mediumDateFormat: mediumDateFormat,
+          singleDigitHourFormat: singleDigitHourFormat,
+          singleDigitMinuteFormat: singleDigitMinuteFormat,
+          doubleDigitMinuteFormat: doubleDigitMinuteFormat,
+          singleDigitSecondFormat: singleDigitSecondFormat,
+          decimalFormat: decimalFormat,
+        );
 
   // #docregion Getters
 
