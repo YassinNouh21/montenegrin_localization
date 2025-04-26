@@ -1,4 +1,14 @@
-# 0.1.0+1
+## 0.1.0+2
+
+* Fixed missing required parameter `weekdayFormat` in `MontenegrinCupertinoLocalizations`
+
+## 0.1.0+1
+
+* Initial release of the montenegrin_localization package
+* Added support for Montenegrin (crnogorski/латиница) localization
+* Implemented Material, Cupertino, and Widgets localizations
+* Added comprehensive text translations and region-specific formatting
+* Included documentation and examples
 
 ### Added
 - Initial release of Montenegrin Localization package
